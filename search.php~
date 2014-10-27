@@ -46,7 +46,7 @@
         
 
 
-       $sql_select = "SELECT * FROM registration_tbl WHERE name LIKE '%" . $name . "%' ";
+       $sql_select = "SELECT * FROM registration_tbl WHERE name LIKE ' . $name . ' ";
 
     $stmt = $conn->query($sql_select);
     $registrants = $stmt->fetchAll(); 
@@ -65,7 +65,7 @@
         }
         echo "</table>";
     } else {
-        echo "<h3>No one is currently registered.</h3>";
+        echo "<h3>No one is currently registered in that name.</h3>";
     }
 
 
