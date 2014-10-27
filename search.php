@@ -18,7 +18,7 @@
 <body>
 <h1>Register here please!</h1>
 <p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
-<form method="post" action="index.php" enctype="multipart/form-data" >
+<form method="post" action="search.php" enctype="multipart/form-data" >
       Name  <input type="text" name="name" id="name"/></br>
       
       <input type="submit" name="submit" value="Submit" />
@@ -46,7 +46,8 @@
         
 
 
-       $sql_select = "SELECT * FROM registration_tbl";
+       $sql_select = "SELECT * FROM registration_tbl WHERE name = '?'";
+     $stmt->bindValue(1, $name);
     $stmt = $conn->query($sql_select);
     $registrants = $stmt->fetchAll(); 
     if(count($registrants) > 0) {
