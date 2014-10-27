@@ -16,8 +16,8 @@
 </style>
 </head>
 <body>
-<h1>Register here please!</h1>
-<p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
+<h1>Search here!</h1>
+<p>Fill in name, then click <strong>Submit</strong> to SEARCH.</p>
 <form method="post" action="search.php" enctype="multipart/form-data" >
       Name  <input type="text" name="name" id="name"/></br>
       
